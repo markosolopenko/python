@@ -1,4 +1,4 @@
-"""Extra Perfect Numbers (Special Numbers Series #7)git """
+"""Extra Perfect Numbers (Special Numbers Series #7)"""
 def extra_perfect(n):
     c = []
     for a in range(n + 1):
