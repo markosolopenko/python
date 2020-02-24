@@ -1,6 +1,7 @@
 """
-We should to find the shortest word in the string
+We should to find the length of the shortest word in the string
 """
+
 def find_short(s):
     b = []
     # Making all character lower
@@ -9,4 +10,10 @@ def find_short(s):
         c = len(a)
         b.append(c)
     return min(b)
+
+
+def find_short(s):
+    # list comprehension solution
+    return min([len(x) for x in s.split(' ')])
+
 print(find_short("bitcoin take over the world maybe who knows perhaps"))

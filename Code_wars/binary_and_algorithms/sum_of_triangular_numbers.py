@@ -19,6 +19,8 @@ def sum_triangular_numbers(n):
         num += int(word[-1])
         lista = ''
     return num
+
+
 print(sum_triangular_numbers(34))
 
 # easier solution
