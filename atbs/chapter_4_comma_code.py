@@ -6,4 +6,9 @@ def creating_the_comma_code(spam):
         else:
             resalt += characters + ", "
     return resalt
+
+
+# def creating_the_comma_code(spam):
+#     return ', '.join([word for word in spam[:-1]]) + ' and ' + spam[-1]
+
 print(creating_the_comma_code(['apples', 'bananas', 'tofu', 'cats']))
