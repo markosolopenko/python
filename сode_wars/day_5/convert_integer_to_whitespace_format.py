@@ -18,9 +18,10 @@ def whitespace_number(n):
         if character == len(arr) - 1:
             space_tab_lf_string += '\n'
 
-
-
-    return space_tab_lf_string.replace(" ", '[space]').replace("\t", "[tab]").replace('\n', '[LF]')
+    return space_tab_lf_string\
+        .replace(" ", '[space]')\
+        .replace("\t", "[tab]")\
+        .replace('\n', '[LF]')
 
 
 
@@ -34,5 +35,7 @@ def whitespace_number(n):
 #     elif n == 0:
 #         return " \n"
 #     return " " + bin(n)[2:].replace("0", " ").replace("1", "\t") + "\n"
+
+
 if __name__ == "__main__":
     print(whitespace_number(-1))

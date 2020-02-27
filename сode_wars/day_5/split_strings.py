@@ -9,4 +9,5 @@ def solution(s):
             pairs.append(string)
             string = ''
     return pairs
+
 print(solution("asdfads"))

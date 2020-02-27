@@ -1,3 +1,5 @@
+# TODO: Check correctness
+
 def index_equals_value(arr):
     lowest_index = []
     for char in range(len(arr)):
