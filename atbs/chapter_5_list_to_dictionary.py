@@ -1,5 +1,5 @@
 
-from atbs.intresting_things.chapter_5_fantasy_game_invenory import displayInventoryShort
+from atbs.chapter_5_fantasy_game_invenory import displayInventoryShort
 
 
 def addToInventory(inv, dragon_loot):

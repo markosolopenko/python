@@ -17,6 +17,7 @@ def binary_gcd(x, y):
         x, y = y, x % y
     # Converting GCD to binary
     x = bin(x).replace("0b", "")
+    print(x)
     # Loop for count amount of "1"
     b = 0
     for a in x:

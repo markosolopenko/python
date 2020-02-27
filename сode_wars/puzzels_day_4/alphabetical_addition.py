@@ -17,6 +17,6 @@ if __name__ == "__main__":
     print(ord('a') - 97)
     print(ord('z') - 97)
 
-# s = (3 - 1)%26
-# print(s)
+s = (3 - 1)%26
+print(s)
 
