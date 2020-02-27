@@ -10,6 +10,15 @@ class Person:
 
     def __str__(self):
         return f'{self.name} {self.surname}'
+class Motorola:
+
+    def __init__(self, model, cost):
+        self.model = model
+        self.cost = cost
+
+    def __str__(self):
+        return f'{self.model} {self.cost}'
+
 
 
 def table_printer(table_data, offset = 2):
