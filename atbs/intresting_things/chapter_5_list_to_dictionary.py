@@ -28,4 +28,3 @@ addToInventory({'gold coin': 42, 'rope': 1},['gold coin', 'dagger', 'gold coin',
 #
 # my_dict.setdefault('d', 4)
 #
-# print(my_dict)
