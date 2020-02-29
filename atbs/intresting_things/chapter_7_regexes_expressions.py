@@ -2,7 +2,7 @@ import re
 """
 Finding Patterns of Text Without Regular Expressions
 """
-message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+# message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
 # for i in range(len(message)):
 #   chunk = message[i:i+12]
 #   print(chunk)
@@ -40,3 +40,7 @@ message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
 # phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # has no groups
 # phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
 # ['415-555-9999', '212-555-0000']
+import re
+# def create_phone_number(n):
+#     return '({}{}{}) {}{}{}-{}{}{}{}'.format(*n)
+#

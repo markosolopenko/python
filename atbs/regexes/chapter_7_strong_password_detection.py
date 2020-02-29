@@ -1,11 +1,14 @@
-import pyperclip, re
+import re
+def password_detection():
+    while True:
+        user_password = input("Enter your password: ")
+        s = re.match('^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$',user_password)
+        if s:
+            print('Good password!!!')
+            break
+        else:
+            print("You password is not strong!!!")
+            print("Try again")
 
-strong_pwd_regex = re.compile(r'\d+\s+')
-
-password = strong_pwd_regex.search("12")
-print(password.groups())
-# matches = []
-#
-# for groups in strong_pwd_regex.findall(password):
-#     if len(matches) < 8:
-#         print('Password needs to be at least 8 characters long.')
+if __name__ == "__main__":
+    password_detection()
