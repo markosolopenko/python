@@ -1,7 +1,17 @@
-def hangman(word_to_guess):
+import random
+
+def hangman():
+    # Random word from file
+    lines = open("WordsForGames.txt").readlines()
+    line = lines[0]
+    words = line.split()
+    word_to_guess = random.choice(words)
+    length_of_word = len(word_to_guess)
+    print("Welcome to the game Hangman!I am thinking of a word that is " + str(length_of_word) + " letters long")
+    #
     amount_of_guesses = 0
     real_word = ''
-    final_exeplare = ''
+    final_example = ''
     true_answers = 0
     hidden_word = len(word_to_guess)*"_"
     hidden = []
@@ -22,17 +32,17 @@ def hangman(word_to_guess):
                 else:
                     continue
             for a in hidden:
-                real_word += a + "|"
+                real_word += a + ' '
             print("Good your letter exist: " + '[' + str(real_word) + ']')
-            final_exeplare = real_word
+            final_example = real_word
             real_word = ''
         else:
             amount_of_guesses+=1
             print("Oops, here is no one letter like this")
-    if final_exeplare == word_to_guess:
+    if final_example == word_to_guess:
         print("My congratulation you win!!!!!")
     else:
         print("Sorry but not today!!")
 
 if __name__ == "__main__":
-    hangman('congretulations')
+    hangman()
