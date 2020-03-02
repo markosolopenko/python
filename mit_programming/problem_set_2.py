@@ -1,19 +1,27 @@
 import random
 
+
 def hangman():
-    # Random word from file
-    lines = open("WordsForGames.txt").readlines()
-    line = lines[0]
-    words = line.split()
+
+    words = []
+
+    with open('WordsForGames.txt', 'r') as file:
+        for line in file:
+            words_in_line = line.split()
+            words.extend(words_in_line)
+
+    words = [word.lower().strip() for word in words]
     word_to_guess = random.choice(words)
     length_of_word = len(word_to_guess)
-    print("Welcome to the game Hangman!I am thinking of a word that is " + str(length_of_word) + " letters long")
-    #
+
+    print(f"Welcome to the game Hangman!"
+          f"I am thinking of a word that is {length_of_word} letters long")
+
     amount_of_guesses = 0
     real_word = ''
     final_example = ''
     true_answers = 0
-    hidden_word = len(word_to_guess)*"_"
+    hidden_word = len(word_to_guess) * "_"
     hidden = []
     for sel in hidden_word:
         hidden.append(sel)
@@ -24,8 +32,8 @@ def hangman():
         player_try = str(input("Please put letter: "))
         if player_try in word_to_guess and player_try not in hidden:
             if word_to_guess.count(player_try) > 1:
-                true_answers+=1
-            true_answers+=1
+                true_answers += 1
+            true_answers += 1
             for char in range(len(hidden)):
                 if word_to_guess[char] == player_try:
                     hidden[char] = player_try
@@ -33,16 +41,18 @@ def hangman():
                     continue
             for a in hidden:
                 real_word += a + ' '
-            print("Good your letter exist: " + '[' + str(real_word) + ']')
-            final_example = real_word
+            print(f"Good your letter exist: [{str(real_word)}]")
+            final_example = real_word.replace(' ', '')
             real_word = ''
         else:
             amount_of_guesses+=1
             print("Oops, here is no one letter like this")
+
     if final_example == word_to_guess:
         print("My congratulation you win!!!!!")
     else:
         print("Sorry but not today!!")
+
 
 if __name__ == "__main__":
     hangman()

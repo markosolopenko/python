@@ -1,1 +1,6 @@
-Welcome HangMan game guesses answer correct  loose
+Welcome HangMan game guesses
+answer correct  loose
+Marko
+Andrii
+consecutive
+hello
