@@ -4,7 +4,7 @@ def hangman():
     # Random word from file
     lines = open("WordsForGames.txt").readlines()
     line = lines[0]
-    words = line.split()
+    words = [word.lower().strip() for word in line.split()]
     word_to_guess = random.choice(words)
     length_of_word = len(word_to_guess)
     print("Welcome to the game Hangman!I am thinking of a word that is " + str(length_of_word) + " letters long")
@@ -34,11 +34,12 @@ def hangman():
             for a in hidden:
                 real_word += a + ' '
             print("Good your letter exist: " + '[' + str(real_word) + ']')
-            final_example = real_word
+            final_example = real_word.replace(" ", '')
             real_word = ''
         else:
             amount_of_guesses+=1
             print("Oops, here is no one letter like this")
+    print(final_example)
     if final_example == word_to_guess:
         print("My congratulation you win!!!!!")
     else:
