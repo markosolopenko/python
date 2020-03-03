@@ -47,9 +47,6 @@ def hangman():
             for a in hidden:
                 real_word += a + ' '
 
-            print("Good your letter exist: " + '[' + str(real_word) + ']')
-            final_example = real_word.replace(" ", '')
-
             print(f"Good your letter exist: [{str(real_word)}]")
             final_example = real_word.replace(' ', '')
 
