@@ -20,5 +20,6 @@ def thirt(n):
         n = str(sum_of_divide)[::-1]
         sum_of_divide = 0
 
+
 if __name__ == "__main__":
     print(thirt(85299258))
