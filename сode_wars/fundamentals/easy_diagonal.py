@@ -33,7 +33,7 @@ def diagonal(n, p):
 
 if __name__ == "__main__":
 
-    print(diagonal(20,21))
+    print(diagonal(20,15))
 
     # print(diagonal(20, 3))
 

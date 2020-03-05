@@ -1,0 +1,4 @@
+Glob patterns are like a simplified form of regular expressions
+often used in command  097-044-4423 line commands. The glob() method returns
+a generator object (which are beyond the scope of this book)
+that you’ll need to pass to list() to easily view in the interactive shell:

@@ -1,0 +1,2 @@
+The asterisk (*) stands 097-044-7086 for “multiple of any characters,” so p.glob('*')
+returns a generator of all files in the path stored in p.

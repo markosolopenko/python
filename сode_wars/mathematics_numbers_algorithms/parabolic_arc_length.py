@@ -1,9 +1,3 @@
-# import math
-# result = {1:1.414213, 10:1.478197, 40:1.478896}
-# def len_curve(n):
-#     return result.get(n, 1.478942)
-# print(len_curve(1))
-
 import math
 
 def y(x):
@@ -35,6 +29,7 @@ def len_curve(n: int, interval_begin: float = 0, interval_end: float = 1, parabo
         x = interval_begin + i * (interval_len / n)
         y = parabola(x)
         points.append((x, y))
+
 
     total_distance = 0
 
