@@ -7,7 +7,6 @@ def hangman():
     line = lines[0]
     words = [word.lower().strip() for word in line.split()]
 
-
     words = []
 
     with open('WordsForGames.txt', 'r') as file:
@@ -52,12 +51,10 @@ def hangman():
 
             real_word = ''
         else:
-            amount_of_guesses+=1
+            amount_of_guesses += 1
             print("Oops, here is no one letter like this")
 
     print(final_example)
-
-
 
     if final_example == word_to_guess:
         print("My congratulation you win!!!!!")

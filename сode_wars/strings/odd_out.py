@@ -1,5 +1,6 @@
 from pprint import pprint
-def odd_one_out(s):
+
+def odd_one_out(s: str):
     array = []
     for a in s:
         if s.count(a) % 2 == 0:

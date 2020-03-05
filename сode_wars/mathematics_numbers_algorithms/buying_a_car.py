@@ -1,3 +1,5 @@
+
+
 def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
     amount_of_month = 1
     first = savingperMonth
@@ -16,6 +18,7 @@ def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
         if (startPriceOld + savingperMonth) - startPriceNew > 0:
             break
 
-    return [amount_of_month -1, round((startPriceOld + savingperMonth) - startPriceNew, 0)]
+    return [amount_of_month - 1, round((startPriceOld + savingperMonth) - startPriceNew, 0)]
+
 if __name__ == "__main__":
     print(nbMonths(2000, 8000, 1000, 1.5))
