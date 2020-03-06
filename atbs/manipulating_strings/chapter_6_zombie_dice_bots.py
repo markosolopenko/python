@@ -5,7 +5,7 @@
 #         self.name = name
 #
 #     def turn(self, gameState):
-#         # gameState is a dict with info about the current state of the game.
+#         # gameState is a dictionary with info about the current state of the game.
 #         # You can choose to ignore it in your code.
 #
 #         diceRollResults = zombiedice.roll() # first roll

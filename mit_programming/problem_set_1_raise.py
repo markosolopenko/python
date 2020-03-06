@@ -17,4 +17,5 @@ def house_hunting():
             semi += 6
         count_months += 1
     return count_months
+
 print(house_hunting())

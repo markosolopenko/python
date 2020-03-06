@@ -17,28 +17,21 @@ def solve(time):
 
     if m == '00' and h == '00':
         return "midnight"
-    if (m == '00'):
+    elif m == '00':
         return nums_hours[int(h)] + " o'clock"
-
-    if (m == '01'):
+    elif m == '01':
         return "one minute past " + nums_hours[int(h)]
-
-    if (m == '59'):
+    elif m == '59':
         return "one minute to " + nums_hours[int(h) + 1]
-
-    if (m == '15'):
+    elif m == '15':
         return "quarter past " + nums_hours[int(h)]
-
-    if (m == '30'):
+    elif m == '30':
         return "half past " + nums_hours[int(h)]
-
-    if (m == '45'):
+    elif m == '45':
         return "quarter to " + nums_hours[int(h) + 1]
-
-    if (int(m) <= 30):
+    elif int(m) <= 30:
         return nums_minutes[int(m)] + " minutes past " + nums_hours[int(h)]
-
-    if (int(m) > 30):
+    elif int(m) > 30:
         return nums_minutes[60 - int(m)] + " minutes to " + nums_hours[int(h) + 1]
 
 

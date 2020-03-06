@@ -1,5 +1,6 @@
 from fractions import Fraction
 
+from typing import List
 
 ####### Very bad solution #######
 # def sum_fracts(lst):
@@ -43,11 +44,11 @@ from fractions import Fraction
 
 
 #####Little better solution####
-def sum_fracts(lst):
+def sum_fracts(rationals: List[list]):
     suma = 0
-    if lst:
-        for (a,b) in lst:
-            suma += Fraction(a,b)
+    if rationals:
+        for (a, b) in rationals:
+            suma += Fraction(a, b)
         silt = []
         let = str(suma).split("/")
         for s in let:
@@ -55,6 +56,8 @@ def sum_fracts(lst):
                 return int(s)
             silt.append(int(s))
         return silt
+
+
 if __name__ == "__main__":
     print(sum_fracts([[69, 130], [87, 1310], [3, 4]]))
 

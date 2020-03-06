@@ -7,4 +7,4 @@ def solution(s):
     return new
 
 if __name__ == "__main__":
-    print(solution("helloWorld"))
+    print(solution("helloWorldHereWeAre"))
