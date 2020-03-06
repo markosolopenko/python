@@ -1,7 +1,7 @@
 from pathlib import Path
 from pprint import pprint
 def mad_libs():
-    with open('text.txt', 'r') as file:
+    with open('text004.txt', 'r') as file:
         context = file.read()
         for line in context.split():
             if "ADJECTIVE" in line:
@@ -14,7 +14,7 @@ def mad_libs():
                 prompt = input("Enter the verb:\n")
                 context = context.replace("VERB", prompt)
         pprint(context)
-    with open('text.txt','a') as some:
+    with open('text004.txt', 'a') as some:
         some.write(context)
         some.close()
 
