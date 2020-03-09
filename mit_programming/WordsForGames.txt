@@ -1,4 +1,7 @@
-Welcome HangMan game guesses
+Welcome HangMan game guessesIf the file is not very
+large an easy way to pick a random
+character is to read it into a string first,
+then just select a random character from the string
 answer correct  loose
 Marko
 Andrii

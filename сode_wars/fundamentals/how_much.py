@@ -33,4 +33,4 @@ def how_much(m, n):
 
 
 if __name__ == "__main__":
-    print(how_much(10000, 9950))
+    print(how_much(10000, 9980))
