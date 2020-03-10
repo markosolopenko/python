@@ -11,5 +11,3 @@ import requests
 #     print('There was a problem: %s' % (exc))
 
 import bs4
-
-

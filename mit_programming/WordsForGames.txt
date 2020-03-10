@@ -1,4 +1,8 @@
 Welcome HangMan game guessesIf the file is not very
+Classes can be used in many different ways. In this book we emphasize using
+them in the context of object-oriented programming. The key to object-
+oriented programming is thinking about objects as collections of both data and
+the methods that operate on that data
 large an easy way to pick a random
 character is to read it into a string first,
 then just select a random character from the string
