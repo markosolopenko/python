@@ -13,21 +13,13 @@ def Scrable_game():
         print(f'Current Hand: {hand}')
         ask = input(f'Would you like to substitute a letter?')
         if ask == 'yes':
-            with open('WordsForGames.txt', 'r') as file:
-                content = file.read()
-            letter_to_replace = input(f'Which letter would you like to replace: ')
-            rand = random.choice(content)
-            if rand.isalpha():
-                hand = hand.replace(letter_to_replace, rand)
-                dict_from_letters = get_frequency_dict(hand)
-                print(f'Current hand: {hand}')
+            replace = replace_letter(hand)
+            dict_from_letters = get_frequency_dict(replace)
+            print(f'Current Hand: {replace}')
         else:
             print(f'Current hand: {hand}')
         while True:
             player_word = input(f'Please enter a word or "!!" to indicate you are done: ')
-            if '*' in player_word:
-                rep = input('Vowel: ')
-                player_word = player_word.replace('*', rep, 1)
             if player_word == '!!':
                 print(f'Total score for this hand: {all_hands_count}')
                 s = input(f'Would you like to replay the hand? ')
@@ -38,20 +30,28 @@ def Scrable_game():
                     a += 1
                     break
             else:
-                check_if_valid = is_valid_word(player_word,hand)
+                if '*' in player_word:
+                    copy = hand[:]
+                    cop1 = player_word[:]
+                    select = input('Select word from vol: ')
+                    copy = copy.replace('*', select, 1)
+                    cop1 = cop1.replace('*', select, 1)
+                    check_if_valid = is_valid_word(cop1, copy)
+                else:
+                    check_if_valid = is_valid_word(player_word, hand)
                 if check_if_valid is False:
                     print(f'That is not a valid word. Please choose another word.')
-                    refresh = update_hand(dict_from_letters,player_word)
+                    refresh = update_hand(dict_from_letters, player_word)
                     dict_from_letters = get_frequency_dict(refresh)
                     if not refresh:
-                        a+=1
+                        a += 1
                         print(f'Ran out of letters. Total score: {all_hands_count} points')
                         break
                     else:
                         print(f"Current hand: ", ' '.join(refresh))
 
                 else:
-                    count = word_scores(player_word,n)
+                    count = word_scores(player_word, n)
                     all_hands_count += count
                     print(f'"{player_word}" earned {count} points. Total: {all_hands_count}')
                     refresh = update_hand(dict_from_letters, player_word)
@@ -138,7 +138,7 @@ def update_hand(refresh_dict,word):
     hand = ''
     for a in dictionary.keys():
         if dictionary[a] > 1:
-            hand += (dictionary[a]-1) * a
+            hand += (dictionary[a]) * a
         else:
             hand += a
     return hand
@@ -148,7 +148,7 @@ def update_hand(refresh_dict,word):
 def is_valid_word(word,hand):
     with open('words.txt', 'r') as file:
         content = file.read()
-    content = content.lower()
+        content = content.lower()
     if word not in content.split():
         return False
     for a in word:
@@ -157,24 +157,17 @@ def is_valid_word(word,hand):
     return True
 
 
-####### DO not understand why
-def deal_hand(n):
-    hand = {}
-    VOWELS = 'aeiou'
-    num_vowels = int(math.ceil(n / 3))
+
+
+def replace_letter(hand):
     with open('WordsForGames.txt', 'r') as file:
-        CONSONANTS = file.read()
-    for i in range(num_vowels):
-        x = random.choice(VOWELS)
-        hand[x] = hand.get(x, 0) + 1
-
-    for i in range(num_vowels, n):
-        x = random.choice(CONSONANTS)
-        if x.isalpha():
-            hand[x] = hand.get(x, 0) + 1
-
-    return hand
-
+        content = file.read()
+    letter_to_replace = input(f'Which letter would you like to replace: ')
+    while True:
+        rand = random.choice(content)
+        if rand.isalpha() and rand != letter_to_replace and rand not in hand:
+            hand = hand.replace(letter_to_replace, rand.lower())
+            return hand
 
 
 if __name__ == "__main__":
