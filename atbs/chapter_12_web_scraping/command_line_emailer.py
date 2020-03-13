@@ -13,6 +13,6 @@ click = browser.find_element_by_xpath('//*[@id="identifierNext"]/span').click()
 time.sleep(10)
 # Enter Password
 password = browser.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
-password.send_keys("marko1997117")
+password.send_keys("********")
 # Click for login
 login = browser.find_element_by_xpath('//*[@id="passwordNext"]/span/span').click()
