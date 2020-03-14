@@ -1,11 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import request
-import bs4
+# import request
+# import bs4
 import random
 import time
 
-browser = webdriver.Chrome('/home/marko/Downloads/chromedriver_linux64/chromedriver')
+browser = webdriver.Chrome('/home/dinamic/Downloads/chromedriver_linux64/chromedriver')
 browser.get('https://play2048.co/')
 
 # Start the game

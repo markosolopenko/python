@@ -1,6 +1,8 @@
 from pprint import pprint
 import random
 import math
+
+
 def Scrable_game():
     a = 0
     players = int(input("Enter total number of hands: "))

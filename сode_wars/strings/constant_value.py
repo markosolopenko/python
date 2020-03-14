@@ -1,17 +1,9 @@
 def solve(s: str):
-    vowels = "aeiou"
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    constant_of_value = []
-    count = 0
-    for letter in s:
-        if letter in vowels:
-            s = s.replace(letter,'a')
-    s = s.split('a')
-    for letter in s:
-        for close in letter:
-            count += alphabet.index(close) + 1
-        constant_of_value.append(count)
-        count = 0
-    return max(constant_of_value)
+    for vowel in 'aeiou':
+        s = s.replace(vowel, 'a')
+    splits = s.split('a')
+    return max([sum([ord(letter) - 96 for letter in letters]) for letters in splits])
+
+
 if __name__ == "__main__":
     print(solve("zodiacs"))
