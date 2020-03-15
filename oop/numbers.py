@@ -42,11 +42,11 @@ if __name__ == "__main__":
 
     print(obj.x)
     obj.x = 4
-    del obj.x
+
 
     print(obj.value)
     obj.value = 12
-    del obj.value
+
 
 
 
