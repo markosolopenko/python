@@ -1,14 +1,19 @@
+
 class UserExistingError(Exception):
     pass
+
 
 class AgeLessError(Exception):
     pass
 
+
 class AgeNotReal(Exception):
     pass
 
+
 class InvalidEmail(Exception):
     pass
+
 
 class User:
     def __init__(self, username, email):
@@ -25,7 +30,7 @@ list_new = ''
 
 for name, email, age in data_list:
     try:
-        if age <= 16 and age > 0:
+        if 0 < age <= 16:
             raise AgeLessError
         elif age < 0:
             raise AgeNotReal
@@ -43,6 +48,9 @@ for name, email, age in data_list:
         print(f'Email address should has "@" symbol')
     else:
         new_dict[name] = email
+    finally:
+        pass
+
 for k, v in new_dict.items():
     print(f'{k}: {v}')
 

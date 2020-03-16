@@ -36,5 +36,7 @@ class Numbers:
             'b': self.MULTIPLIER
         }
         return reload
+
+
 a = Numbers(12, 13)
-b = Numbers(21,22)
+b = Numbers(21, 22)
