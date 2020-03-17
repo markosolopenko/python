@@ -20,4 +20,5 @@ def some_function(*args, **kwargs):
 
 if __name__ == "__main__":
 
-    some_function(1, 2, 3, a=5, b=6, c=7)
+    s = func_log(some_function)
+    print(s(1, 2, 3, a=5, b=6, c=7))

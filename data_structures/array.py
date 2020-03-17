@@ -35,12 +35,10 @@ class Array:
         if self.length() >= self.size:
             raise NoSpaceInArrayException()
         else:
-            position = -1
             for index, el in enumerate(self.data):
                 if el is self.default_value:
-                    position = index
+                    self.data[index] = element
                     break
-            self.data[position] = element
 
     def insert(self, index, element, force=True):
         """
@@ -159,19 +157,20 @@ if __name__ == "__main__":
     my_array.insert(index=3, element='O', force=True)
 
     assert my_array.data == ['A', None, None, 'O', None]
+    print(my_array)
 
     # my_array.insert(index=5, element='S', force=True)
 
     # my_array.insert(index=3, element='P', force=False)
 
-    my_array.add('S')
+    #my_array.add('S')
 
-    assert my_array.data == ['A', 'S', None, 'O', None]
+    #assert my_array.data == ['A', 'S', None, 'O', None]
 
-    my_array.add('S')
-    my_array.add(5)
+    # my_array.add('S')
+    # my_array.add(5)
 
-    assert my_array.data == ['A', 'S', 'S', 'O', 5]
+    #assert my_array.data == ['A', 'S', 'S', 'O', 5]
 
     # my_array.add('9')
 
@@ -179,19 +178,19 @@ if __name__ == "__main__":
 
     # assert my_array.data == ['A', 'O', 5, None, None]
 
-    assert my_array.find(5) == 4
-
-    assert my_array.find_all('S') == [1, 2]
-
-    second_array = Array(3)
-
-    second_array.add('B')
-    second_array.add('C')
-
-    print(my_array)
-    print(second_array)
-    print(my_array + second_array)
-
-    arr = Array.from_seq((1, 2, 32, 13, 21, 32))
-
-    print(arr)
+    # assert my_array.find(5) == 4
+    #
+    # assert my_array.find_all('S') == [1, 2]
+    #
+    # second_array = Array(3)
+    #
+    # second_array.add('B')
+    # second_array.add('C')
+    #
+    # print(my_array)
+    # print(second_array)
+    # print(my_array + second_array)
+    #
+    # arr = Array.from_seq((1, 2, 32, 13, 21, 32))
+    #
+    # print(arr)
