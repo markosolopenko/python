@@ -49,8 +49,8 @@ class SinglyLinkedList(object):
         current = self.head
         count = 0
         while current:
-            current = current.get_next()
             count += 1
+            current = current.get_next()
         return count
 
     def search(self, data):
