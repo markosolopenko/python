@@ -72,7 +72,7 @@ class Sentetic:
 
 
 obj = Sentetic(a=2, b=3, c=2)
-print(obj)
+
 
 
 
@@ -89,4 +89,8 @@ print(obj)
 # jane = Person("Jane", "Smith")
 #
 # print(dir(Person))
+
+
+
+
 

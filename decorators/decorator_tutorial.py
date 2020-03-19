@@ -3,6 +3,7 @@ import time
 import random
 from flask import Flask, url_for, redirect, g, request
 
+
 def do_twice(func):
     @functools.wraps(func)
     def wrapper_do_twice(*args, **kwargs):
@@ -130,4 +131,7 @@ def login_required(func):
 @login_required
 def secret():
     pass
-print(login_required(secret))
+
+
+
+
