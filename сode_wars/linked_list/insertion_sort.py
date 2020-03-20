@@ -28,15 +28,15 @@ def insert_sort(head):
         current = head
         head = head.next
         if current.data < sorted_list.data:
-            # Advance the nodes
+
             current.next = sorted_list
             sorted_list = current
         else:
-            # Search list for correct position of current
+
             search = sorted_list
             while search.next != None and current.data > search.next.data:
                 search = search.next
-            # current goes after search
+
             current.next = search.next
             search.next = current
     return sorted_list
