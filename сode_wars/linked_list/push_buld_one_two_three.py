@@ -33,7 +33,7 @@ def build_one_two_three():
 # print(push(Node(1), 2).data)
 # print(push(Node(1), 2).next.data)
 
-print(build_one_two_three().data)
-print(build_one_two_three().next.data)
-print(build_one_two_three().next.next.data)
-print(build_one_two_three().next.next.next)
+# print(build_one_two_three().data)
+# print(build_one_two_three().next.data)
+# print(build_one_two_three().next.next.data)
+# print(build_one_two_three().next.next.next)

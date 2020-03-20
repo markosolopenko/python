@@ -1,3 +1,4 @@
+from сode_wars.linked_list.push_buld_one_two_three import push, build_one_two_three
 class Node(object):
     def __init__(self, data=None):
         self.data = data
@@ -5,6 +6,13 @@ class Node(object):
 
 
 def insert_nth(head, index, data):
+        """
+        Append data by index
+        :param head:
+        :param index:
+        :param data:
+        :return:
+        """
         if index == 0:
             new_node = Node(data)
             new_node.next = head
@@ -12,8 +20,6 @@ def insert_nth(head, index, data):
             return new_node
         else:
             new_node = Node(data)
-
-
             previous_node = head
             current_node = head.next
             index_of_el = 1
@@ -29,26 +35,8 @@ def insert_nth(head, index, data):
             return head
 
 
-def push(head, data):
-    linked_list = Node()
-    linked_list.head = Node(data)
-    linked_list.head.next = head
-    return linked_list.head
 
-
-def build_one_two_three():
-    head = None
-    new_node = Node()
-    first = push(head, 1)
-    second = push(head, 2)
-    third = push(head, 3)
-    new_node.head = first
-    first.next = second
-    second.next = third
-    return new_node.head
-
-
-s = insert_nth(build_one_two_three(), 5, 23)
+s = insert_nth(build_one_two_three(), 2, 23)
 print(s.data)
 print(s.next.data)
 print(s.next.next.data)
