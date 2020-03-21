@@ -4,16 +4,24 @@ class Node(object):
         self.data = data
         self.next = None
 
-def remove_duplicates(head, element):
-    current_el = head
-    if current_el.data == element:
-        current_el = current_el.next
-        return current_el
-    else:
+
+def remove_duplicates(head):
+    temp = head
+    if temp is None:
+        return
+    while temp.next is not None:
+        if temp.data == temp.next.data:
+            new = temp.next.next
+            temp.next = None
+            temp.next = new
+        else:
+            temp = temp.next
+    return head
 
 
-s = remove_duplicates(build_one_two_three(), 1)
+s = remove_duplicates(build_one_two_three())
 print(s.data)
 print(s.next.data)
 print(s.next.next.data)
-# print(s.next.next.next.data)
+print(s.next.next.next)
+# print(s.next.next.next.next)

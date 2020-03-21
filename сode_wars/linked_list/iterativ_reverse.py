@@ -13,7 +13,7 @@ def print_helper(node, name):
 def reverse(head):
     previous = None
     current = head
-    while (current is not None):
+    while (current):
 
         next_one = current.next
         current.next = previous

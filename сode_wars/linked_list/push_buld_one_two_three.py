@@ -15,10 +15,10 @@ def push(head, data):
 def build_one_two_three():
     head = None
     new_node = Node()
-    first = push(head, 'A')
-    second = push(head, 'B')
-    third = push(head, 'C')
-    fourth = push(head, 'D')
+    first = push(head, 1)
+    second = push(head, 2)
+    third = push(head, 2)
+    fourth = push(head, 3)
     new_node.head = first
     first.next = second
     second.next = third

@@ -24,7 +24,7 @@ class Stack:
         self.data.append(element)
 
 
-    def pop(self):
+    def pop_element(self):
         """
         delete element
         :return:
@@ -60,15 +60,15 @@ class Stack:
         return count
 
     def is_balanced(self, expression):
+        new_list = Stack()
         exist_braces = {'{': '}', '[': ']', '(': ')'}
-        queue = []
         for brace in expression:
             if brace in exist_braces.keys():
-                queue.append(exist_braces[brace])
+                new_list.push(exist_braces[brace])
             elif brace in exist_braces.values():
-                if not queue or brace != queue.pop():
+                if not new_list or brace != new_list.pop_element():
                     return False
-        return not queue
+        return self.is_empty()
 
 
 
@@ -82,7 +82,7 @@ my_stack = Stack()
 # print(my_stack.peek())
 # print(my_stack.length())
 # print(my_stack.is_empty())
-# print(my_stack.data)
+print(my_stack.data)
 assert my_stack.is_balanced('(()()())') is True
 assert my_stack.is_balanced('())') is False
 assert my_stack.is_balanced('[](){({}{[]})}') is True
