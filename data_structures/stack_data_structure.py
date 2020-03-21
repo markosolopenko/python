@@ -1,19 +1,16 @@
-# from _collections import deque
+from _collections import deque
+from queue import LifoQueue
+
+
 class Stack:
     """
     Creating Stack class
     """
-    def __init__(self, size, default_value=None):
+    def __init__(self):
         """
-        Initialize attributes of class and fill the list by default values
-        :param size:
-        :param default_value:
+        Initialize attributes of class
         """
-        self.size = size
-        self.default_value = default_value
-        self.data = []
-        for _ in range(size):
-            self.data.append(default_value)
+        self.data = deque()
 
 
 
@@ -24,10 +21,7 @@ class Stack:
         :param element:
         :return:
         """
-        for el in range(len(self.data)):
-            if self.data[el] is None:
-                self.data[el] = element
-                break
+        self.data.append(element)
 
 
     def pop(self):
@@ -35,37 +29,24 @@ class Stack:
         delete element
         :return:
         """
-        if self.data:
-            top = -1
-            while self.data[top] is None:
-                top -= 1
-            delete = self.data.pop()
-            return delete
-        else:
-            return "Stack is empty"
-
+        try:
+            return self.data.pop()
+        except IndexError:
+            return 'Sorry but stack is empty'
 
     def peek(self):
         """
         take the argument from stack
         :return:
         """
-        top = -1
-        if self.data:
-            while self.data[top] is None:
-                top -= 1
-            return self.data[top]
-        else:
-            return None
-
+        return self.data[-1]
     def is_empty(self):
         """
         Check if Stack is empty
         :return:
         """
-        for a in self.data:
-            if a is not None:
-                return False
+        if self.data:
+            return False
         return True
 
     def length(self):
@@ -75,23 +56,17 @@ class Stack:
         """
         count = 0
         for a in self.data:
-            if a is not None:
-                count += 1
+            count += 1
         return count
 
 
-my_stack = Stack(3)
+my_stack = Stack()
 my_stack.push(12)
 print(my_stack.peek())
 print(my_stack.is_empty())
-# assert my_stack.data == deque([12, None, None])
-# my_stack.push(13)
-# assert my_stack.data == deque([12, 13, None])
-# my_stack.push(48)
-# print(my_stack.peek())
-# print(my_stack.peek())
-# print(my_stack.pop())
-# print(my_stack.pop())
-# print(my_stack.pop())
-# print(my_stack.pop())
+my_stack.push(48)
+print(my_stack.peek())
+print(my_stack.peek())
+print(my_stack.length())
+print(my_stack.is_empty())
 print(my_stack.data)
