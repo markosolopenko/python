@@ -11,20 +11,20 @@ def print_helper(node, name):
         print(f'{name}: {node.data}')
 
 def reverse(head):
-    previous = None
-    current = head
-    while (current):
-
-        next_one = current.next
-        current.next = previous
-
-        # print_helper(previous, 'Previous')
-        # print_helper(current, 'Current')
-        # print_helper(next_one, 'NXT')
-        previous = current
-        current = next_one
-    head = previous
+    linked_list = head
+    size_linked_list = 0
+    while linked_list is not None:
+        size_linked_list += 1
+        linked_list = linked_list.next
+    for i in range(size_linked_list - 1, 0, -1):
+        xcount = 0
+        linked_list = head
+        while (xcount != i):
+            linked_list.data, linked_list.next.data = linked_list.next.data, linked_list.data
+            linked_list = linked_list.next
+            xcount += 1
     return head
+
 
 
 s = reverse(build_one_two_three())
