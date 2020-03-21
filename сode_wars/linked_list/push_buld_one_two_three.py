@@ -17,8 +17,8 @@ def build_one_two_three():
     new_node = Node()
     first = push(head, 1)
     second = push(head, 2)
-    third = push(head, 2)
-    fourth = push(head, 3)
+    third = push(head, 3)
+    fourth = push(head, 2)
     new_node.head = first
     first.next = second
     second.next = third

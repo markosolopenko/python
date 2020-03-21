@@ -8,7 +8,7 @@ class Node(object):
 def remove_duplicates(head):
     temp = head
     if temp is None:
-        return
+        return None
     while temp.next is not None:
         if temp.data == temp.next.data:
             new = temp.next.next

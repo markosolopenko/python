@@ -82,7 +82,6 @@ my_stack = Stack()
 # print(my_stack.peek())
 # print(my_stack.length())
 # print(my_stack.is_empty())
-print(my_stack.data)
 assert my_stack.is_balanced('(()()())') is True
 assert my_stack.is_balanced('())') is False
 assert my_stack.is_balanced('[](){({}{[]})}') is True
