@@ -1,30 +1,30 @@
 class Node(object):
-    def __init__(self, data=None, next_node=None):
+    def __init__(self, data=None):
         self.data = data
-        self.next_node = next_node
+        self.next = next
 
-    def get_data(self):
-        """
-        This method like -> @property
-        :return:
-        """
-        return self.data
+    # def get_data(self):
+    #     """
+    #     This method like -> @property
+    #     :return:
+    #     """
+    #     return self.data
+    #
+    #
+    # def get_next(self):
+    #     """
+    #     getter
+    #     :return:
+    #     """
+    #     return self.next_node
 
-
-    def get_next(self):
-        """
-        getter
-        :return:
-        """
-        return self.next_node
-
-    def set_next(self, new_next):
-        """
-        setter
-        :param new_next:
-        :return:
-        """
-        self.next_node = new_next
+    # def set_next(self, new_next):
+    #     """
+    #     setter
+    #     :param new_next:
+    #     :return:
+    #     """
+    #     self.next_node = new_next
 
 
 class SinglyLinkedList(object):
@@ -38,8 +38,17 @@ class SinglyLinkedList(object):
         :return:
         """
         new_node = Node(new_data)
-        new_node.set_next(self.head)
+        new_node.next = self.head
         self.head = new_node
+
+
+        # current = self.head
+        # if
+        # new_node = Node(new_data)
+        # new_node.next = self.head
+        # self.head =
+
+
 
     def size(self):
         """
@@ -96,23 +105,30 @@ class SinglyLinkedList(object):
         Traversing the list
         :return:
         """
-        head_value = self.head
-        while head_value:
-            print(head_value.get_data(), end= ',')
-            head_value= head_value.get_next()
+        current = self.head
+        while current is not None:
+            print(current.data, end=' ')
+            current = current.next
 
 
 
 
 
-linked_list = SinglyLinkedList()
-linked_list.head = Node('Hello')
-e1 = Node('Mi')
-e2 = Node('Si')
+# linked_list = SinglyLinkedList()
+# linked_list.head = Node('Hello')
+# e1 = Node('Mi')
+# e2 = Node('Si')
+#
+# linked_list.head.set_next(e1)
+# e1.set_next(e2)
+# print(linked_list.search("Mi").get_data())
+# print(linked_list.delete("Hello"))
+# print(linked_list.size())
+# print(linked_list.print_list())
 
-linked_list.head.set_next(e1)
-e1.set_next(e2)
-print(linked_list.search("Mi").get_data())
-print(linked_list.delete("Hello"))
-print(linked_list.size())
-print(linked_list.print_list())
+a = SinglyLinkedList()
+a.insert(12)
+a.insert(2)
+a.insert(48)
+a.print_list()
+

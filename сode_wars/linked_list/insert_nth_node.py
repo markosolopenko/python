@@ -36,7 +36,7 @@ def insert_nth(head, index, data):
 
 
 
-s = insert_nth(build_one_two_three(), 2, 23)
+s = insert_nth(build_one_two_three(), 0, 23)
 print(s.data)
 print(s.next.data)
 print(s.next.next.data)

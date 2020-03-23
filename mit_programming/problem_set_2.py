@@ -3,13 +3,13 @@ import random
 
 def hangman():
     # Random word from file
-    lines = open("WordsForGames.txt").readlines()
+    lines = open("words.txt").readlines()
     line = lines[0]
     words = [word.lower().strip() for word in line.split()]
 
     words = []
 
-    with open('WordsForGames.txt', 'r') as file:
+    with open('words.txt', 'r') as file:
         for line in file:
             words_in_line = line.split()
             words.extend(words_in_line)
@@ -18,7 +18,7 @@ def hangman():
     word_to_guess = random.choice(words)
     length_of_word = len(word_to_guess)
 
-    print(f"Welcome to the game Hangman!"
+    print(f"Welcome to the game Hangman! "
           f"I am thinking of a word that is {length_of_word} letters long")
 
     amount_of_guesses = 0
@@ -54,11 +54,11 @@ def hangman():
             amount_of_guesses += 1
             print("Oops, here is no one letter like this")
 
-    print(final_example)
 
     if final_example == word_to_guess:
         print("My congratulation you win!!!!!")
     else:
+        print(word_to_guess)
         print("Sorry but not today!!")
 
 
