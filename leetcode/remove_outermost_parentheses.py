@@ -34,3 +34,22 @@ my_class = Solution()
 print(my_class.remove_outer_parentheses("(()())(())(()(()))"))
 
 
+class Solution(object):
+    def removeOuterParentheses(self, S):
+        """
+        :type expression: str
+        :rtype: str
+        """
+        cnt = 0
+        strlist = []
+        ii = 0
+        for ind, ch in enumerate(S):
+            if ch == '(': cnt += 1
+            if ch == ')': cnt -= 1
+            if cnt == 0:
+                strlist.append(S[ii + 1:ind])
+                ii = ind + 1
+        return "".join(strlist)
+
+
+

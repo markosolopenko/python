@@ -11,6 +11,7 @@ def cache(func):
     @functools.wraps(func)
     def wrapper_cache(*args, **kwargs):
         cache_key = args
+        print(f'{cache_key} i am here')
         if cache_key not in wrapper_cache.cache:
             wrapper_cache.cache[cache_key] = func(*args, **kwargs)
         return wrapper_cache.cache[cache_key]

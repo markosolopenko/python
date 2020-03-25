@@ -8,5 +8,5 @@ def palindrom(s):
 
 if __name__ == '__main__':
     print(palindrom('sdffd'))
-    s = 'sdffds'
-    print(s[1:-1])
+    # s = 'sdffds'
+    # print(s[1:-1])
