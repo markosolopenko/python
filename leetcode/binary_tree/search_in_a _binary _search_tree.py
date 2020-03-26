@@ -12,17 +12,15 @@ class Solution(object):
         :type val: int
         :rtype: TreeNode
         """
-        res = []
-        if root:
-            if val < root.val:
-                res = res + self.search_bst(root.left, val)
-                res.append(root.val)
-            if val > root.val:
-                res = res + self.search_bst(root.right, val)
-                res.append(root.val)
-            return res
+        if root and root.val != val:
+            if root.val > val:
+                return self.search_bst(root.left, val)
+            else:
+                return self.search_bst(root.right, val)
+        return root
 
 
 if __name__ == '__main__':
     root = Solution()
+    print(root.search_bst(TreeNode(12), 12).val)
 

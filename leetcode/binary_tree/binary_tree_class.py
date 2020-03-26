@@ -26,7 +26,7 @@ class Node:
     def print_tree(self):
         if self.left:
             self.left.print_tree()
-        print(self.data),
+        print(self.data)
         if self.right:
             self.right.print_tree()
 
@@ -52,7 +52,8 @@ class Node:
 
 # post_order traversal
 # Left ->Right -> Root
-    def post_order_traversal(self, root):
+    def post_order_traversal(self, root):# root.insert(31)
+# root.insert(42)
         res = []
         if root:
             res = self.post_order_traversal(root.left)
@@ -61,13 +62,15 @@ class Node:
         return res
 
 
-root = Node(27)
-root.insert(14)
-root.insert(35)
-root.insert(10)
-root.insert(19)
-root.insert(31)
-root.insert(42)
-print(root.in_order_traversal(root))
-print(root.pre_order_traversal(root))
-print(root.post_order_traversal(root))
+
+
+root = Node(62)
+root.insert(2)
+root.insert(93)
+root.insert(30)
+root.insert(15)
+print(root.pre_order_traversal(root.left))
+root.print_tree()
+# print(root.in_order_traversal(root))
+# print(root.pre_order_traversal(root))
+# print(root.post_order_traversal(root))

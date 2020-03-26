@@ -3,16 +3,14 @@ def min_num_taxis(requests):
     if len(requests) == 1:
         return 1
     else:
-
-
-        # for a in range(len(requests)):
-        #     for index in range(len(requests)):
-        #         if index == len(requests):
-        #             break
-        #         if requests[a][1] + 1 == requests[index][0]:
-        #             resume -= 1
-        #             continue
-        # return resume
+        for a in range(len(requests)):
+            for index in range(len(requests)):
+                if index == len(requests):
+                    break
+                if requests[a][1] + 1 == requests[index][0]:
+                    resume -= 1
+                    continue
+        return resume
 
 
 
