@@ -18,8 +18,8 @@ class Solution:
 
 if __name__ == '__main__':
     my_class = Solution()
-    new_root = TreeNode(4)
-    new_root.insert(2), new_root.insert(7), new_root.insert(1), new_root.insert(6)
+    new_root = TreeNode(-8)
+    new_root.insert(-6), new_root.insert(7), new_root.insert(6), new_root.insert(5)
     new_root.insert(3), new_root.insert(9)
     print(new_root.print_tree())
     s = my_class.invert_tree(new_root)

@@ -22,5 +22,5 @@ class Solution(object):
 
 if __name__ == '__main__':
     root = Solution()
-    print(root.search_bst(TreeNode(12), 12).val)
+    print(root.search_bst(TreeNode(12), 12))
 
