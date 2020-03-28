@@ -1,4 +1,4 @@
-from leetcode.binary_tree.diameter_of_binary_tree import TreeNode
+from leetcode.binary_tree.diiferent_task_with_binary_tree.diameter_of_binary_tree import TreeNode
 # Definition for a binary tree node.
 
 class Solution:

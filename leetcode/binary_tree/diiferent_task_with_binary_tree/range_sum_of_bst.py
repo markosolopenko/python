@@ -1,4 +1,4 @@
-from leetcode.binary_tree.diameter_of_binary_tree import TreeNode
+from leetcode.binary_tree.diiferent_task_with_binary_tree.diameter_of_binary_tree import TreeNode
 
 class Solution:
     def range_sum_bst(self, root: TreeNode, left_node: int, right_node: int) -> int:
