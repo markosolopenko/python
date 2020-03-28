@@ -5,7 +5,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
     def insert(self, element):
         if self.val:
             if element < self.val:
