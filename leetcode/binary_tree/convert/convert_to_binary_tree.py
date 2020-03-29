@@ -17,3 +17,14 @@ if __name__ == '__main__':
     my_class = Solution()
     s = my_class.sorted_array_to_bst([-10, -3, 0, 5, 9])
     print(s.val, s.left.val, s.right.val)
+    
+    
+    
+    
+    masiv = [1, 2, 3, 4, 5, 6]
+    some = masiv[:len(masiv)//2]
+    some1 = masiv[len(masiv)//2+1:]
+    some.reverse()
+    some1.reverse()
+    print(somen)
+
