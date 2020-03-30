@@ -4,13 +4,12 @@ class Node(object):
         self.next = None
 
 
-
-
 def push(head, data):
     linked_list = Node()
     linked_list.head = Node(data)
     linked_list.head.next = head
     return linked_list.head
+
 
 def build_one_two_three():
     head = None

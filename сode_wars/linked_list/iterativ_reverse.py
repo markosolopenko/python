@@ -1,14 +1,18 @@
 from сode_wars.linked_list.push_buld_one_two_three import build_one_two_three
+
+
 class Node(object):
     def __init__(self, data=None):
         self.data = data
         self.next = None
+
 
 def print_helper(node, name):
     if node is None:
         print(f'{name}: None')
     else:
         print(f'{name}: {node.data}')
+
 
 def reverse(head):
     linked_list = head
@@ -25,11 +29,11 @@ def reverse(head):
             xcount += 1
     return head
 
+if __name__ == '__main__':
 
-
-s = reverse(build_one_two_three())
-print(s.data)
-print(s.next.data)
-print(s.next.next.data)
-print(s.next.next.next.data)
-print(s.next.next.next.next)
+    s = reverse(build_one_two_three())
+    print(s.data)
+    print(s.next.data)
+    print(s.next.next.data)
+    print(s.next.next.next.data)
+    print(s.next.next.next.next)

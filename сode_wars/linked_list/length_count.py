@@ -3,6 +3,7 @@ class Node(object):
         self.data = data
         self.next = None
 
+
 def length(node):
     current = node
     length_of_list = 0
@@ -10,6 +11,7 @@ def length(node):
         length_of_list += 1
         current = current.next
     return length_of_list
+
 
 def count(node, data):
     amount_of_element = 0

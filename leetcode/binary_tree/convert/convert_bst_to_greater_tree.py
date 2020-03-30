@@ -67,6 +67,7 @@ if __name__ == '__main__':
     # print(new_node.val, new_node.left.val, new_node.right.val, new_node.left.right.val)
     # print(mine.convert_to_list(new_node))
     new = mine.convert_bst(new_node)
-    print(new.val, new.left.val, new.right.val)
+    # print(new.val, new.left.val, new.right.val)
     # never = mine.convert_bst(new_node, 0)
     # print(never.val, never.left.val, never.right.val)
+

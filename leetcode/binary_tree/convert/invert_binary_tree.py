@@ -2,6 +2,7 @@ from leetcode.binary_tree.diiferent_task_with_binary_tree.diameter_of_binary_tre
 # Definition for a binary tree node.
 
 class Solution:
+
     def invert_tree(self, root: TreeNode) -> TreeNode:
         if root:
             root.left, root.right = root.right, root.left
