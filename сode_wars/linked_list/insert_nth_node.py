@@ -1,4 +1,6 @@
 from сode_wars.linked_list.push_buld_one_two_three import push, build_one_two_three
+
+
 class Node(object):
     def __init__(self, data=None):
         self.data = data
