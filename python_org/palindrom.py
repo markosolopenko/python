@@ -11,3 +11,4 @@ if __name__ == '__main__':
     print(palindrom('lhsdffdshl'))
     # s = 'sdffds'
     # print(s[1:-1])
+
