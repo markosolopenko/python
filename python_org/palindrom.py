@@ -3,7 +3,6 @@ def palindrom(s):
         return True
     if s[0] != s[-1]:
         return False
-    print(s)
     return palindrom(s[1:-1])
 
 
