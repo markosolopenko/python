@@ -4,7 +4,8 @@ def reverse(lst):
     for i in lst:
         empty_list[decrease] = i
         decrease -= 1
-    return empty_list
+    lst = empty_list
+    return lst
 
 
 if __name__ == '__main__':
