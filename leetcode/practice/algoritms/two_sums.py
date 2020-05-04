@@ -15,7 +15,6 @@ class Solution:
                 return [a, nums.index(target - nums[a])]
 
 
-
 if __name__ == '__main__':
     my_class = Solution()
     print(my_class.two_sum([0,4,3,0], 0))

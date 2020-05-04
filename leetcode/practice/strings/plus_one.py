@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         a = -1
@@ -21,3 +22,7 @@ class Solution:
         else:
             digits[-1] = digits[-1] + 1
         return digits
+
+if __name__ == '__main__':
+    my_class=Solution()
+    print(my_class.plusOne())

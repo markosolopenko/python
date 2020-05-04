@@ -12,6 +12,7 @@ class Solution:
             return sum(arr_profit)
         return 0
 
+
 if __name__ == '__main__':
     my_class=Solution()
-    print(my_class.max_profit([1,23,4,5,67,9]))
+    print(my_class.max_profit([1, 23, 4, 5, 67, 9]))
