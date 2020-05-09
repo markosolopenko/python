@@ -24,8 +24,6 @@ class Solution:
         return res
 
 
-
-
 if __name__ == '__main__':
     mine = Solution()
     node = TreeNode(1)
