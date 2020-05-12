@@ -18,5 +18,22 @@ def find_number(last_name: str) -> str:
             return f'For find your number "{last_name}" we should to do <{run_time}> operations'
 
 
+def loop_binary_search(array, num_to_find):
+    mid = len(array) // 2
+    run_time = 1
+    for _ in array:
+        if array[mid] > num_to_find:
+            array = array[:mid]
+            mid = len(array) // 2
+            run_time += 1
+        elif array[mid] < num_to_find:
+            array = array[mid:]
+            mid = len(array) // 2
+            run_time += 1
+        else:
+            return f'For find your number <{array[mid]}> we need <{run_time}> operations'
+
+
 if __name__ == '__main__':
-    print(find_number('Nolopenko'))
+    print(loop_binary_search(list(range(1, 200)), 20))
+    # print(find_number('Nolopenko'))
