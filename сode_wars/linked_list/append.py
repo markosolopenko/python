@@ -6,6 +6,7 @@ class Node(object):
         self.data = data
         self.next = None
 
+
 def append(list_a, list_b):
     if list_a == None:
         return list_b
@@ -17,6 +18,8 @@ def append(list_a, list_b):
             current = current.next
         current.next = list_b
         return list_a
+
+
 s = append(build_one_two_three(), build_one_two_three())
 print(s.data)
 print(s.next.data)
