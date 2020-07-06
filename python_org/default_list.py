@@ -25,8 +25,10 @@ class DefaultList:
 
     def pop(self, index):
         self.list_elements.pop(index)
+
     def __str__(self):
         return self.list_elements
+
 
 lst = DefaultList([9131, 'BC u', True, 4178, 8853, True, 3208, 1307, True], 5579)
 lst.extend([12,32,44,"BCD"])
