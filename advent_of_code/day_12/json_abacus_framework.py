@@ -23,5 +23,4 @@ def get_non_red_numbers(content):
 
 
 if __name__ == "__main__":
-    # sum_of_all_numbers()
     print(sum(get_non_red_numbers(open('day12.txt').readline())))
