@@ -43,7 +43,9 @@ def smart_solution(s, second_part=False):
     length = int(parens.group(1))
     times = int(parens.group(2))
     start = parens.start() + len(parens.group())
+
     count = smart_solution(s[start:start+length], True) if second_part else length
+
     return (len(s[:parens.start()]) + times * count + smart_solution(s[start+length:], second_part))
 
 
